@@ -36,4 +36,9 @@ public class SearchApiController {
         return ResponseEntity.ok(service.getResults(query));
     }
 
+    @GetMapping(path = "/health", produces = {MediaType.TEXT_PLAIN_VALUE})
+    public ResponseEntity<String> hello() {
+        return ResponseEntity.ok("Hello World !");
+    }
+
 }

@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerDocumentationConfig {
 
-    @Value("/api/")
+    @Value("/")
     private String swaggerDocBasePath;
 
     /**
@@ -28,7 +28,7 @@ public class SwaggerDocumentationConfig {
      * @return the api info
      */
     ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("MultiTenant Application").description("GAE Search api").license("Apache 2.0")
+        return new ApiInfoBuilder().title("GAE-SEARCH-API Application").description("GAE Search api").license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html").termsOfServiceUrl("").version("1.0.0")
                 .contact(new Contact("", "", "2311uttam@gmail.com")).build();
     }

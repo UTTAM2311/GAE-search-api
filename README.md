@@ -8,13 +8,19 @@
 ## Prerequisites
 * Gradle 4.0 or Later
 * Java 8 
-* [google auth sdk](https://cloud.google.com/sdk/docs/downloads-apt-get) 
+* [Google Cloud SDK](https://cloud.google.com/sdk/) (aka gcloud command line tool)
 
+## Setup
+
+* Download and initialize the [Cloud SDK](https://cloud.google.com/sdk/)
+
+    `gcloud init`
+
+* Create an App Engine app within the current Google Cloud Project
+
+    `gcloud app create`
+    
 ## Start the application 
 
-    # Configure the project,account and other details . 
-    gcloud init 
-    # verify the project  
-    gradle clean build .
     ## Deploy the application in app Engine .
     gradle appEngineDeploy     
