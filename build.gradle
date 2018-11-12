@@ -33,8 +33,9 @@ repositories {
 
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter-web')
-    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'jstl:jstl:1.2'
+    compile("org.springframework.boot:spring-boot-starter-web")
     // https://mvnrepository.com/artifact/com.google.appengine/appengine-api-1.0-sdk
     compile group: 'com.google.appengine', name: 'appengine-api-1.0-sdk', version: '1.9.67'
     compile group: 'org.fluttercode.datafactory', name: 'datafactory', version: '0.8'
@@ -44,6 +45,12 @@ dependencies {
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 
 }
+
+configurations.all {
+    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    exclude group: 'org.slf4j', module: 'jul-to-slf4j'
+}
+
 
 appengine {  // App Engine tasks configuration
     deploy {   // deploy configuration
