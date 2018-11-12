@@ -1,8 +1,3 @@
-server:
-  jetty:
-    acceptors: 5
-    max-http-post-size: 1000000
-    selectors: 10
 springfox:
   documentation:
     swagger:
